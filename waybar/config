@@ -83,10 +83,10 @@
         "spacing": 10
     },
     "clock": {
-        // "timezone": "America/New_York",
+        "timezone": "Europe/Berlin",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}",
-	"locale": "de"
+	"locale": "de_DE.UTF-8"
     },
     "cpu": {
         "format": "{usage}% ",
