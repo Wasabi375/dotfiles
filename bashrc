@@ -19,10 +19,10 @@ fi
 [[ $- != *i* ]] && return
 
 #alias ls='ls --color=auto'
-alias ls='eza -X'
-alias la='eza -aX'
-alias ll='eza -hlX --git'
-alias lla='eza -hlXa --git'
+alias ls='eza -X --icons'
+alias la='eza -Xa --icons'
+alias ll='eza -Xhl --git'
+alias lla='eza -Xhla --git'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
