@@ -5,10 +5,39 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
-    "modules-center": ["wlr/window"],
-// disabled modules:  "backlight", 
-    "modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray"],
+    "modules-left": [
+	"hyprland/workspaces",
+	// "custom/right-arrow-light",
+	// "custom/right-arrow-dark",
+	"hyprland/window"
+	// "custom/right-arrow-dark"
+    ],
+    "modules-center": [
+	//	"custom/left-arrow-dark",
+		"clock#1",
+	//	"custom/left-arrow-light",
+	//	"custom/left-arrow-dark",
+		"clock#2",
+	//	"custom/right-arrow-dark",
+	//	"custom/right-arrow-light",
+		"clock#3"
+	//	"custom/right-arrow-dark"
+	],
+    // disabled modules:  "backlight", 
+    "modules-right": [
+	"mpd",
+	"idle_inhibitor", 
+	"pulseaudio", 
+	"network", 
+	"cpu", 
+	"memory",
+	"temperature", 
+	"keyboard-state", 
+	"battery", 
+	"tray"
+    ],
+
+
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -26,6 +55,24 @@
     //         "default": ""
     //     }
     // },
+
+	"custom/left-arrow-dark": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/left-arrow-light": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/right-arrow-dark": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/right-arrow-light": {
+		"format": "",
+		"tooltip": false
+	},
+
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -34,16 +81,6 @@
             "locked": "",
             "unlocked": ""
         }
-    },
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-    "sway/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": ["", ""],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
     },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
@@ -82,12 +119,33 @@
         // "icon-size": 21,
         "spacing": 10
     },
+
+	"clock#1": {
+        	"timezone": "Europe/Berlin",
+		"format": "{:%a}",
+		"tooltip": false
+	},
+	"clock#2": {
+		"format": "{:%H:%M}",
+        	"timezone": "Europe/Berlin",
+        	"format-alt": "{:%Y-%m-%d}",
+		"tooltip": false
+
+	},
+	"clock#3": {
+        	"timezone": "Europe/Berlin",
+		"format": "{:%d.%m.%y}",
+		"locale": "de_DE.UTF-8",
+        	"tooltip-format": "<tt>{calendar}</tt>"
+	},
+
     "clock": {
         "timezone": "Europe/Berlin",
         "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}",
 	"locale": "de_DE.UTF-8"
     },
+
     "cpu": {
         "format": "{usage}% ",
         "tooltip": false
@@ -122,14 +180,12 @@
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
-    "battery#bat2": {
-        "bat": "BAT2"
-    },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-wifi": "({signalStrength}%) ",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
+	"tooltip-format-wifi": "{essid}: {ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
