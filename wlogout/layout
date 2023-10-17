@@ -1,0 +1,38 @@
+{
+    "label" : "lock",
+    "action" : "sleep 1; swaylock",
+    "text" : "Lock",
+    "keybind" : "l"
+}
+{
+    "label" : "logout",
+    "action" : "sleep 1; loginctl terminate-user $USER",
+    "text" : "Logout",
+    "keybind" : "e"
+}
+{
+    "label" : "hibernate",
+    "action" : "notify-send 'Hibernate Disabled!' 'Hibernate is disabled to ensure dual boot does not break anything' --icon=dialog-information",
+    "text" : "Hibernate",
+    "keybind" : "h"
+}
+
+{
+    "label" : "shutdown",
+    "action" : "sleep 1; systemctl poweroff",
+    "text" : "Shutdown",
+    "keybind" : "s"
+}
+{
+    "label" : "suspend",
+    "action" : "sleep 1; systemctl suspend",
+    "text" : "Suspend",
+    "keybind" : "u"
+}
+{
+    "label" : "reboot",
+    "action" : "sleep 1; systemctl reboot",
+    "text" : "Reboot",
+    "keybind" : "r"
+}
+
