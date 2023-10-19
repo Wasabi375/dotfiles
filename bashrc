@@ -24,6 +24,11 @@ alias la='eza -Xa --icons'
 alias ll='eza -Xhl --git'
 alias lla='eza -Xhla --git'
 alias grep='grep --color=auto'
+
+alias v=nvim
+
+
+
 PS1='[\u@\h \W]\$ '
 
 EDITOR=vim
