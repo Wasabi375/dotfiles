@@ -27,8 +27,14 @@ alias grep='grep --color=auto'
 
 alias v=nvim
 
+alias open=xdg-open
+
+# quick jump aliase ala cduni cdhome, etc
+[[ -f ~/.config/cd-alias.sh ]] && . ~/.config/cd-alias.sh
 
 
 PS1='[\u@\h \W]\$ '
 
 EDITOR=vim
+
+export PATH=$PATH:~/bin
