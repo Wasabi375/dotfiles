@@ -1,21 +1,15 @@
+@define-color base-text #fdf6e3;
+@define-color bg-dark #1a1a1a;
+@define-color bg-light #292b2e;
+
 * {
-	font-size: 15px;
+	font-size: 12px;
 	font-family: monospace;
 }
 
 window#waybar {
-	background: #292b2e;
-	color: #fdf6e3;
-}
-
-#custom-right-arrow-dark,
-#custom-left-arrow-dark {
-	color: #1a1a1a;
-}
-#custom-right-arrow-light,
-#custom-left-arrow-light {
-	color: #292b2e;
-	background: #1a1a1a;
+	background: @bg-light;
+	color: @base-text;
 }
 
 #workspaces,
@@ -27,14 +21,16 @@ window#waybar {
 #cpu,
 #battery,
 #disk,
-#tray
-#hyprland {
-	background: #1a1a1a;
+#window, 
+#tray {
+	background: @bg-dark;
+	padding: 0 10px;
+    border-radius: 16px;
 }
 
 #workspaces button {
 	padding: 0 2px;
-	color: #fdf6e3;
+	color: @base-text;
 }
 #workspaces button.focused {
 	color: #268bd2;
@@ -42,10 +38,8 @@ window#waybar {
 #workspaces button:hover {
 	box-shadow: inherit;
 	text-shadow: inherit;
-}
-#workspaces button:hover {
-	background: #1a1a1a;
-	border: #1a1a1a;
+	background: @bg-dark;
+	border: @bg-dark;
 	padding: 0 3px;
 }
 
