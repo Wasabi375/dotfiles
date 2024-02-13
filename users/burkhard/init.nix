@@ -17,6 +17,7 @@
       neovide
       neovim
       ripgrep
+      thunderbird
       tree
       unzip
     ];
