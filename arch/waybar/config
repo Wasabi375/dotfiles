@@ -1,5 +1,5 @@
 {
-    "include": ["~/dotfiles/waybar/modules.json"],
+    "include": ["~/dotfiles/arch/waybar/modules.json"],
 
     "layer": "top", // Waybar at top layer
                     // "position": "bottom", // Waybar position (top|bottom|left|right)
@@ -23,17 +23,17 @@
 
 
     "modules-right": [
-        "custom/updates",
+        // "custom/updates",
         "custom/left-arrow",
         "pulseaudio", 
-        "network", 
+        // "network", 
         "cpu", 
         "memory",
         "temperature", 
         "keyboard-state", 
         "battery", 
-        "tray",
-        "custom/exit"
+        "tray"
+        // "custom/exit"
     ],
 }
 

@@ -12,5 +12,5 @@ fi
 
 hyprctl dispatch -- togglespecialworkspace $SPECIAL_WORKSPACE
 hyprctl dispatch -- movetoworkspace $ACTIVE_WORKSPACE
-hyprctl dispatch -- togglespecialworkspace $SPECIAL_WORKSPACE
+# hyprctl dispatch -- togglespecialworkspace $SPECIAL_WORKSPACE
 
