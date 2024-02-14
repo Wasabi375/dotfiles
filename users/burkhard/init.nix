@@ -4,6 +4,7 @@
   imports =
     [
       ./1password.nix
+      ./discord.nix
     ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -26,6 +27,8 @@
       unzip
     ];
   };
+
+
 
   home-manager.users.burkhard = {
     programs.bash = {
@@ -51,6 +54,7 @@
         v = "nvim";
         nv = "neovide";
         open = "xdg-open";
+        ".." = "cd ..";
       };
       sessionVariables = {
         EDITOR = "vim";
