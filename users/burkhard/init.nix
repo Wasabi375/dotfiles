@@ -36,6 +36,12 @@
               exec Hyprland 
           fi
         '';
+      initExtra =
+        ''
+          function nix-dev-temp {
+              nix flake init --template github:Wasabi375/dev-templates#$1
+          }
+        '';
       shellAliases = {
         ls = "eza -X --icons";
         la = "eza -Xa --icons";
