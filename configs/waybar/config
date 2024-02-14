@@ -1,5 +1,5 @@
 {
-    "include": ["~/dotfiles/arch/waybar/modules.json"],
+    "include": ["~/dotfiles/configs/waybar/modules.json"],
 
     "layer": "top", // Waybar at top layer
                     // "position": "bottom", // Waybar position (top|bottom|left|right)
