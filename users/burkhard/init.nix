@@ -1,12 +1,16 @@
 { config, pkgs, sysVars, usrVars, ... }:
 {
+
+  imports =
+    [
+      ./1password.nix
+    ];
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.burkhard = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
-      _1password
-      _1password-gui
       cargo
       eza
       fd
@@ -44,6 +48,7 @@
       };
       sessionVariables = {
         EDITOR = "vim";
+        ELECTRON_OZONE_PLATFORM_HINT = "wayland";
       };
     };
 
@@ -52,7 +57,6 @@
       userName = usrVars.name;
       userEmail = usrVars.email;
     };
-
 
     # This needs to be set and should stay the version of the inital nixos isntall
     home.stateVersion = "23.11";
