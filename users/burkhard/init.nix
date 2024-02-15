@@ -4,7 +4,6 @@
   imports =
     [
       ./1password.nix
-      ./discord.nix
     ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -13,6 +12,7 @@
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       cargo
+      discord
       eza
       fd
       firefox
@@ -59,6 +59,7 @@
       sessionVariables = {
         EDITOR = "vim";
         ELECTRON_OZONE_PLATFORM_HINT = "wayland";
+        NIXOS_OZONE_WL = 1;
       };
     };
 
