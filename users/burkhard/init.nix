@@ -56,6 +56,7 @@
         nv = "neovide";
         open = "xdg-open";
         ".." = "z ..";
+        nd = "nix develop";
       };
       sessionVariables = {
         EDITOR = "vim";
