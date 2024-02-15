@@ -4,6 +4,7 @@
   imports =
     [
       ./1password.nix
+      ./starship.nix
     ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -25,9 +26,9 @@
       thunderbird
       tree
       unzip
+      zoxide
     ];
   };
-
 
 
   home-manager.users.burkhard = {
@@ -54,7 +55,7 @@
         v = "nvim";
         nv = "neovide";
         open = "xdg-open";
-        ".." = "cd ..";
+        ".." = "z ..";
       };
       sessionVariables = {
         EDITOR = "vim";
@@ -68,6 +69,8 @@
       userName = usrVars.name;
       userEmail = usrVars.email;
     };
+
+    programs.zoxide.enable = true;
 
     # This needs to be set and should stay the version of the inital nixos isntall
     home.stateVersion = "23.11";
