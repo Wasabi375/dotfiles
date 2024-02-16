@@ -1,17 +1,8 @@
+
+
 local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
-
-require('mason').setup({})
-require('mason-lspconfig').setup({
-    ensure_installed = {
-        'rust_analyzer',
-    },
-    handlers = {
-        lsp.default_setup,
-    },
-})
-
 
 local cmp = require('cmp')
 local cmp_action = lsp.cmp_action()
@@ -52,3 +43,15 @@ lsp.setup()
 vim.diagnostic.config({
     virtual_text = true
 })
+
+local lspconfig = require("lspconfig")
+lspconfig.rust_analyzer.setup {
+  -- Server-specific settings. See `:help lspconfig-setup`
+  settings = {
+    ['rust-analyzer'] = {},
+  },
+}
+lspconfig.nixd.setup {}
+lspconfig.lua_ls.setup {}
+
+

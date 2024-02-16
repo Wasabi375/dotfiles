@@ -20,8 +20,10 @@
       gcc
       gh
       git-absorb
+      lua-language-server
       neovide
       neovim
+      nixd
       ripgrep
       thunderbird
       tree
