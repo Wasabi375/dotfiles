@@ -13,6 +13,7 @@
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       cargo
+      direnv
       discord
       eza
       fd
@@ -31,6 +32,8 @@
       zoxide
     ];
   };
+
+  programs.direnv.enable = true;
 
 
   home-manager.users.burkhard = {
