@@ -1,6 +1,3 @@
-vim.keymap.set("n", "<leader>qq", vim.cmd.quit)
-
-
 -- Project keymaps
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "Open current file in directory view. :help Explorer" })
 vim.keymap.set("n", "<leader>ps", vim.cmd.wa)
@@ -26,16 +23,23 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 -- TODO what keymaps did I copy form Primagen here? I should at least try to understand them before I delete them for good.
 -- greatest remap ever
--- vim.keymap.set("x", "<leader>p", [["_dP]])
+-- paste without copying selection
+vim.keymap.set("x", "<leader>dp", [["_dP]])
 
 -- next greatest remap ever : asbjornHaland
--- vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
--- vim.keymap.set("n", "<leader>Y", [["+Y]])
+-- copy into system clipboard
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+vim.keymap.set("n", "<leader>Y", [["+Y]])
 
--- vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
+-- paste from system clipboard
+vim.keymap.set("n", "<leader>P", [["+p]])
+vim.keymap.set("x", "<leader>dP", [["_d"+p]])
+
+vim.keymap.set({ "n", "v" }, "<leader>dd", [["_d]])
 
 -- This is going to get me cancelled
 vim.keymap.set("i", "<C-c>", "<Esc>")
+vim.keymap.set("x", "<leader>P", [["+p]])
 
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)

@@ -1,22 +1,21 @@
-
-
 local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
 
 local cmp = require('cmp')
-local cmp_action = lsp.cmp_action()
 cmp.setup({
     window = {
         completion = cmp.config.window.bordered(),
         documentation = cmp.config.window.bordered(),
     },
     mapping = cmp.mapping.preset.insert({
-        ['<C-p>'] = cmp.mapping.select_prev_item(cmp_action),
-        ['<C-n>'] = cmp.mapping.select_next_item(cmp_action),
+        ['<C-k>'] = cmp.mapping.select_prev_item(),
+        ['<C-j>'] = cmp.mapping.select_next_item(),
         ["<C-Space>"] = cmp.mapping.complete(),
+        ['<F1>'] = cmp.mapping.open_docs(),
         ['<C-u>'] = cmp.mapping.scroll_docs(-4),
         ['<C-d>'] = cmp.mapping.scroll_docs(4),
+        ['<CR>'] = cmp.mapping.confirm({ select = true }),
     })
 })
 
@@ -46,12 +45,10 @@ vim.diagnostic.config({
 
 local lspconfig = require("lspconfig")
 lspconfig.rust_analyzer.setup {
-  -- Server-specific settings. See `:help lspconfig-setup`
-  settings = {
-    ['rust-analyzer'] = {},
-  },
+    -- Server-specific settings. See `:help lspconfig-setup`
+    settings = {
+        ['rust-analyzer'] = {},
+    },
 }
 lspconfig.nixd.setup {}
 lspconfig.lua_ls.setup {}
-
-
