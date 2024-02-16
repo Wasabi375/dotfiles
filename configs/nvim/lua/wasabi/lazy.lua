@@ -14,6 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     {
         'rose-pine/neovim',
+        lazy = true,
         name = 'rose-pine',
         priority = 1000,
         config = function()
@@ -22,9 +23,9 @@ require("lazy").setup({
     },
     {
         "baliestri/aura-theme",
-        lazy = true,
         config = function(plugin)
             vim.opt.rtp:append(plugin.dir .. "/packages/neovim")
+            vim.cmd([[colorscheme aura-dark]])
         end
     },
     {

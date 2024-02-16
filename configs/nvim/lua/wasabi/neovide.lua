@@ -1,1 +1,1 @@
-vim.g.neovide_transparency = 0.6
+vim.g.neovide_transparency = 0.8
