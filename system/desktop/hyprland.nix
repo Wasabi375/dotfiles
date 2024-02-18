@@ -42,7 +42,7 @@
     programs.wpaperd = {
       enable = true;
       settings = {
-        HDMI-A-1 = {
+        default = {
           path = "${usrVars.wallpaper}";
           duration = "3m";
         };
