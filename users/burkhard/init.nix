@@ -77,6 +77,9 @@
       extraConfig = {
         init.defaultBranch = "main";
       };
+      ignores = [
+        "**/.direnv"
+      ];
     };
 
     programs.zoxide.enable = true;
