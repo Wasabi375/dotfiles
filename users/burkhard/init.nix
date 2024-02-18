@@ -74,6 +74,9 @@
       enable = true;
       userName = usrVars.name;
       userEmail = usrVars.email;
+      extraConfig = {
+        init.defaultBranch = "main";
+      };
     };
 
     programs.zoxide.enable = true;
