@@ -21,6 +21,7 @@
       gcc
       gh
       git-absorb
+      hyperfine
       lua-language-server
       neovide
       neovim
