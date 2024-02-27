@@ -56,6 +56,7 @@
     git
     gnugrep
     htop
+    neofetch
     tldr
     vim
     wget
