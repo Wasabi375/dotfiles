@@ -78,7 +78,7 @@
     automatic = true;
     persistent = true;
     dates = "daily";
-    options = "--older-than 14d";
+    options = "--delete-old";
   };
 
   # List services that you want to enable:
