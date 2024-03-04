@@ -15,6 +15,7 @@
     dolphin
     dunst
     hyprland
+    libnotify
     polkit
     qt6ct
     waybar
