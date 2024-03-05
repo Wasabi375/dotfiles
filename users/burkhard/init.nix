@@ -23,6 +23,7 @@
       git-absorb
       hyperfine
       lua-language-server
+      python3
       neovide
       neovim
       nixd
@@ -63,6 +64,7 @@
         open = "xdg-open";
         ".." = "z ..";
         nd = "nix develop";
+        py = "python3";
       };
       sessionVariables = {
         EDITOR = "vim";
