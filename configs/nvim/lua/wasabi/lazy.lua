@@ -44,7 +44,7 @@ require("lazy").setup({
         dependencies = { 'nvim-tree/nvim-web-devicons' }
     },
     --- LSP
-    { 'VonHeikemen/lsp-zero.nvim',        branch = 'v3.x' },
+    { 'VonHeikemen/lsp-zero.nvim', branch = 'v3.x' },
     { 'neovim/nvim-lspconfig' },
     { 'hrsh7th/cmp-nvim-lsp' },
     { 'hrsh7th/nvim-cmp' },
@@ -77,13 +77,13 @@ require("lazy").setup({
             },
             highlight = {
                 pattern = {
-                    [[.*<(KEYWORDS)\s*:]],
-                    [[.*<(KEYWORDS)!\(]],
+                    [[.*<(KEYWORDS)\s*:?]],
+                    [[.*<(KEYWORDS)!]],
                 },
                 comments_only = false,
             },
             search = {
-                pattern = [[\b(KEYWORDS)(:|!\()]],
+                pattern = [[\b(KEYWORDS)(:|!)]],
             },
         }
     }
